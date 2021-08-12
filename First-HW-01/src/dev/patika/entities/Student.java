@@ -80,4 +80,14 @@ public class Student {
         this.gender = gender;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", birthDate=" + birthDate +
+                ", address='" + address + '\'' +
+                ", gender='" + gender + '\'' +
+                ", studentCourses=" + studentCourses +
+                '}';
+    }
 }

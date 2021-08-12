@@ -7,6 +7,7 @@ import dev.patika.service.StudentService;
 import java.util.List;
 
 public class StudentController {
+
     StudentService studentService = new StudentService();
 
     public List<Student> findAll(){

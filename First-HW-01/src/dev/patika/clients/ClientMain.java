@@ -1,11 +1,13 @@
 package dev.patika.clients;
 
+import dev.patika.controller.CourseController;
+import dev.patika.controller.StudentController;
 import dev.patika.entities.*;
 import dev.patika.utils.EntityManagerUtils;
 
 import javax.persistence.EntityManager;
 import java.time.LocalDate;
-import java.time.Month;
+import java.util.List;
 
 public class ClientMain {
     public static void main(String[] args) {
@@ -15,6 +17,25 @@ public class ClientMain {
         if(checkTestData() == 0){
             saveTestData();
         }
+
+        StudentController studentController = new StudentController();
+        CourseController courseController = new CourseController();
+
+        List<Student> students = studentController.findAll();
+        List<Course> courses = courseController.findAll();
+
+        for(Student student : students) {
+            System.out.println("Öğrenci adı: " + student.getName() + "Adres:" + student.getAddress());
+        }
+        System.out.println("------------------");
+
+        for(Course course : courses) {
+            System.out.println("Ders adı: " + course.getName() + "Kredi:" + course.getCredit() + "Öğretmen: " +course.getInstructor().getName() );
+        }
+        System.out.println("------------------");
+
+
+
 
 
 
@@ -54,6 +75,7 @@ public class ClientMain {
         EntityManager em = EntityManagerUtils.getEntityManager("mysqlPU");
 
         try {
+
             em.getTransaction().begin();
 
             em.persist(pi);
@@ -71,6 +93,7 @@ public class ClientMain {
             em.getTransaction().commit();
 
             System.out.println("----------------data persisted....---------");
+
         } catch (Exception e) {
             em.getTransaction().rollback();
         } finally {
