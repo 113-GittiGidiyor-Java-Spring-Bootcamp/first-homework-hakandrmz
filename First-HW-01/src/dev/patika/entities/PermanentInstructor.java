@@ -8,33 +8,28 @@ import java.util.List;
 @Entity
 public class PermanentInstructor extends Instructor{
 
-    private int fixedSalary;
-
-    @OneToMany(mappedBy = "permanentInstructor")
-    private List<Course> courses = new ArrayList<>();
+    private int salary;
 
     public PermanentInstructor() {
     }
 
     public PermanentInstructor(String name, String address, String phoneNumber, int fixedSalary) {
         super(name, address, phoneNumber);
-        this.fixedSalary = fixedSalary;
+        this.salary = fixedSalary;
     }
 
     public int getFixedSalary() {
-        return fixedSalary;
+        return salary;
     }
 
     public void setFixedSalary(int fixedSalary) {
-        this.fixedSalary = fixedSalary;
+        this.salary = fixedSalary;
     }
 
-    public List<Course> getCourses() {
-        return courses;
+    @Override
+    public String toString() {
+        return "PermanentInstructor{" +
+                "fixedSalary=" + salary +
+                '}';
     }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
-    }
-
 }

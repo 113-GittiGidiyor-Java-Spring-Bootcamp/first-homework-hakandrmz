@@ -16,19 +16,36 @@ public class Student {
 
     private String name;
     private LocalDate birthDate;
+    private String address;
     private String gender;
 
-    @ManyToMany
-    private List<Course> courses = new ArrayList<>();
+    @ManyToMany(mappedBy = "students")
+    private List<Course> studentCourses = new ArrayList<>();
 
     public Student() {
     }
 
-    public Student(String name, LocalDate birthDate, String gender, List<Course> courses) {
+    public Student(String name, LocalDate birthDate, String address, String gender) {
         this.name = name;
         this.birthDate = birthDate;
+        this.address = address;
         this.gender = gender;
-        this.courses = courses;
+    }
+
+    public List<Course> getStudentCourses() {
+        return studentCourses;
+    }
+
+    public void setStudentCourses(List<Course> studentCourses) {
+        this.studentCourses = studentCourses;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getId() {
@@ -63,11 +80,4 @@ public class Student {
         this.gender = gender;
     }
 
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
-    }
 }

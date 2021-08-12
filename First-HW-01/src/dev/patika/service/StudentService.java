@@ -64,6 +64,7 @@ public class StudentService implements CrudRepository<Student>, StudentRepositor
             em.getTransaction().rollback();
         } finally {
             em.close();
+            EntityManagerUtils.closeEntityManager(em);
         }
     }
 
@@ -84,6 +85,7 @@ public class StudentService implements CrudRepository<Student>, StudentRepositor
             em.getTransaction().rollback();
         } finally {
             em.close();
+            EntityManagerUtils.closeEntityManager(em);
         }
     }
 

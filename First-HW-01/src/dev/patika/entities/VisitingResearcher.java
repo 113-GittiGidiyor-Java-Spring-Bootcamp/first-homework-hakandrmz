@@ -8,40 +8,28 @@ import java.util.List;
 @Entity
 public class VisitingResearcher extends Instructor{
 
-    private int hourlySalary;
-
-    @OneToMany(mappedBy = "visitingInstructor")
-    private List<Course> courses = new ArrayList<>();
+    private int salary;
 
     public VisitingResearcher() {
     }
 
     public VisitingResearcher(String name, String address, String phoneNumber, int hourlySalary) {
         super(name, address, phoneNumber);
-        this.hourlySalary = hourlySalary;
+        this.salary = hourlySalary;
     }
 
     public int getHourlySalary() {
-        return hourlySalary;
+        return salary;
     }
 
     public void setHourlySalary(int hourlySalary) {
-        this.hourlySalary = hourlySalary;
-    }
-
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
+        this.salary = hourlySalary;
     }
 
     @Override
     public String toString() {
         return "VisitingResearcher{" +
-                "hourlySalary=" + hourlySalary +
-                ", courses=" + courses +
+                "hourlySalary=" + salary +
                 '}';
     }
 }
