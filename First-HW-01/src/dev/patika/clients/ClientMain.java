@@ -22,24 +22,29 @@ public class ClientMain {
         CourseController courseController = new CourseController();
 
         List<Student> students = studentController.findAll();
-        List<Course> courses = courseController.findAll();
-
         for(Student student : students) {
             System.out.println("Öğrenci adı: " + student.getName() + "Adres:" + student.getAddress());
         }
         System.out.println("------------------");
 
+
+        List<Course> courses = courseController.findAll();
         for(Course course : courses) {
-            System.out.println("Ders adı: " + course.getName() + "Kredi:" + course.getCredit() + "Öğretmen: " +course.getInstructor().getName() );
+            System.out.println("Ders adı: " + course.getName() + "Kredi: " + course.getCredit() + "Öğretmen: " +course.getInstructor().getName() );
         }
         System.out.println("------------------");
 
+        System.out.println("Bir öğrenci siliniyor.");
+        studentController.delete(2);
+        System.out.println("Bir öğrenci silindi.");
+        System.out.println("------------------");
 
 
-
-
-
-
+        System.out.println("Yeni bir kurs ekleniyor.");
+        Course course3 = new Course("Algorithm Analysis","AA101",9);
+        courseController.save(course3);
+        System.out.println("Yeni bir kurs eklendi.");
+        System.out.println("------------------");
     }
 
     private static int checkTestData() {
