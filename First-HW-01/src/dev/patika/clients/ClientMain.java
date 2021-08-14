@@ -52,7 +52,7 @@ public class ClientMain {
         System.out.println(" Öğrenci adı: " + foundStudent.getName() + " Öğrenci doğum tarihi " + foundStudent.getBirthDate() + " Adres: " + foundStudent.getAddress());
         System.out.println("Id numarasından öğrenci bilgileri bulundu");
         */
-         */
+
     }
 
     private static int checkTestData() {
