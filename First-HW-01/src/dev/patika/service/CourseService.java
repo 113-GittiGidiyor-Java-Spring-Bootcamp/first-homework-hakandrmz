@@ -87,9 +87,4 @@ public class CourseService implements CrudRepository<Course>, CourseRepository {
             em.close();
         }
     }
-
-    @Override
-    public List<Course> getAllCourses(int id) {
-        return null;
-    }
 }
