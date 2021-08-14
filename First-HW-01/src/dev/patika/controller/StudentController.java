@@ -1,7 +1,7 @@
 package dev.patika.controller;
 
 
-import dev.patika.entities.Student;
+import dev.patika.model.Student;
 import dev.patika.service.StudentService;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package dev.patika.clients;
 
 import dev.patika.controller.CourseController;
 import dev.patika.controller.StudentController;
-import dev.patika.entities.*;
+import dev.patika.model.*;
 import dev.patika.utils.EntityManagerUtils;
 
 import javax.persistence.EntityManager;

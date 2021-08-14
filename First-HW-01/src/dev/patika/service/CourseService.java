@@ -1,7 +1,6 @@
 package dev.patika.service;
 
-import dev.patika.entities.Course;
-import dev.patika.entities.Student;
+import dev.patika.model.Course;
 import dev.patika.repository.CourseRepository;
 import dev.patika.repository.CrudRepository;
 import dev.patika.utils.EntityManagerUtils;

@@ -1,4 +1,4 @@
-package dev.patika.entities;
+package dev.patika.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;

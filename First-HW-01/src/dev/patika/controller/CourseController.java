@@ -1,6 +1,6 @@
 package dev.patika.controller;
 
-import dev.patika.entities.Course;
+import dev.patika.model.Course;
 import dev.patika.service.CourseService;
 
 import java.util.List;

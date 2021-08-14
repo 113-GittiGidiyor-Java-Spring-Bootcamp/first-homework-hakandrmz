@@ -1,9 +1,6 @@
-package dev.patika.entities;
+package dev.patika.model;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class VisitingResearcher extends Instructor{

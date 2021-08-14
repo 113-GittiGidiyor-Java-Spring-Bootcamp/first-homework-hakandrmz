@@ -1,6 +1,6 @@
 package dev.patika.repository;
 
-import dev.patika.entities.Student;
+import dev.patika.model.Student;
 
 import java.util.List;
 

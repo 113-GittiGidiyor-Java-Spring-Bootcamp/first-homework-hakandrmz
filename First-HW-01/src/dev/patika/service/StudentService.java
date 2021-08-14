@@ -1,6 +1,6 @@
 package dev.patika.service;
 
-import dev.patika.entities.Student;
+import dev.patika.model.Student;
 import dev.patika.repository.CrudRepository;
 import dev.patika.repository.StudentRepository;
 import dev.patika.utils.EntityManagerUtils;
@@ -63,7 +63,6 @@ public class StudentService implements CrudRepository<Student>, StudentRepositor
         } catch (Exception e) {
             em.getTransaction().rollback();
         } finally {
-            em.close();
             EntityManagerUtils.closeEntityManager(em);
         }
     }
@@ -84,13 +83,10 @@ public class StudentService implements CrudRepository<Student>, StudentRepositor
         } catch (Exception e) {
             em.getTransaction().rollback();
         } finally {
-            em.close();
             EntityManagerUtils.closeEntityManager(em);
         }
     }
 
     @Override
-    public List<Student> getAllStudentOfCourse(int id) {
-        return null;
-    }
+    public List<Student> getAllStudentOfCourse(int id) {return null;}
 }

@@ -1,4 +1,4 @@
-package dev.patika.entities;
+package dev.patika.model;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.*;

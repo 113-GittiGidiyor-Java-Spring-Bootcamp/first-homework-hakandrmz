@@ -1,6 +1,4 @@
-package dev.patika.entities;
-
-import javafx.scene.layout.CornerRadii;
+package dev.patika.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
